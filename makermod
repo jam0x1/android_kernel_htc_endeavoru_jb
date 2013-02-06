@@ -1,0 +1,6 @@
+export CCOMPILER=/home/pali/android/system/prebuilt/linux-x86/toolchain/arm-eabi-4.4.3/bin/arm-eabi-
+make -C . ARCH=arm CROSS_COMPILE=$CCOMPILER -j`grep 'processor' /proc/cpuinfo | wc -l` modules
+make ARCH=arm CROSS_COMPILE=$CCOMPILER -C drivers/net/wireless/compat-wireless_R5.SP2.03 KLIB=`pwd` KLIB_BUILD=`pwd` clean -j20
+make ARCH=arm CROSS_COMPILE=$CCOMPILER -C drivers/net/wireless/compat-wireless_R5.SP2.03 KLIB=`pwd` KLIB_BUILD=`pwd` -j20
+
+

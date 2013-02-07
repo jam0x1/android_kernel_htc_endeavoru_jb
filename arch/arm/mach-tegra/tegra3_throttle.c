@@ -57,8 +57,8 @@ static unsigned int clip_to_table(unsigned int cpu_freq)
 	i = (i == 0) ? 0 : i-1;
 	return cpu_freq_table[i].frequency;
 }
-
-extern unsigned int no_thermal_throttle_limit;
+// no hotplug auto patch - by Xmister
+extern unsigned int no_thermal_throttle_limit=0;
 
 unsigned int tegra_throttle_governor_speed(unsigned int requested_speed)
 {
